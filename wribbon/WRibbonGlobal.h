@@ -6,7 +6,7 @@
 #ifdef WRIBBON_EXPORTS
 # define WRIBBON_LIB Q_DECL_EXPORT
 #else
-# dfine WRIBBON_LIB Q_DECL_IMPORT
+# define WRIBBON_LIB Q_DECL_IMPORT
 #endif
 
 #endif // !WRIBBON_GLOBAL_H_
