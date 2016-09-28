@@ -3,6 +3,14 @@
 
 #include "Tab.h"
 #include <QWidget>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
+
+namespace WRibbon {
+namespace Private {
+
+} // namespace Private
+} // namespace WRibbon
 
 namespace WRibbon {
 
@@ -23,7 +31,11 @@ public:
 
 private:
 
+  void createElements();
+  void createLayout();
 
+  QVBoxLayout* m_tabSplitter;
+  QHBoxLayout* m_windowButtonGroup;
 };
 
 } // namespace WRibbon
