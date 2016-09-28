@@ -23,7 +23,7 @@ include_directories (${Qt5Core_INCLUDE_DIRS})
 include_directories (${Qt5Widgets_INCLUDE_DIRS})
 include_directories (${Qt5Gui_INCLUDE_DIRS})
 
-file (GLOB WRIBBON_SRC "*.cpp")
+file (GLOB_RECURSE WRIBBON_SRC "*.cpp")
 
 add_library(WRibbon SHARED ${WRIBBON_SRC})
 target_link_libraries(WRibbon Qt5::Core Qt5::Widgets Qt5::Gui)
