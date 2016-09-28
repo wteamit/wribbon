@@ -2,6 +2,7 @@
 #define WRIBBON_MAINWINDOW_H_
 
 #include "WRibbonGlobal.h"
+#include "Ribbon.h"
 #include <QMainWindow>
 
 namespace WRibbon {
@@ -14,8 +15,11 @@ public:
 
   MainWindow();
   virtual ~MainWindow() = default;
+  void setRibbon(Ribbon* ribbon);
 
 private:
+
+  Ribbon m_ribbon = nullptr;
 
 };
 
