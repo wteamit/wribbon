@@ -8,12 +8,12 @@ namespace WRibbon {
 
 class WRIBBON_LIB MainWindow : public QMainWindow {
 
-	Q_OBJECT
+  Q_OBJECT
 
 public:
 
-	MainWindow();
-	virtual ~MainWindow() = default;
+  MainWindow();
+  virtual ~MainWindow() = default;
 
 private:
 
