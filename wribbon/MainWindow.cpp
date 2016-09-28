@@ -8,12 +8,14 @@ namespace WRibbon {
 
 MainWindow::MainWindow() :
   QMainWindow() {
-  setWindowFlags(Qt::CustomizeWindowHint); //Set window with no title bar
-  setWindowFlags(Qt::FramelessWindowHint); //Set a frameless window
+  setWindowFlags(Qt::CustomizeWindowHint);
+  setWindowFlags(Qt::FramelessWindowHint);
+  m_ribbon = new Ribbon(this);
+  setMenuWidget(m_ribbon);
 }
 
-void MainWindow::setRibbon(Ribbon* ribbon) {
-  setMenuWidget(ribbon);
+Ribbon* MainWindow::getRibbon() const {
+  return m_ribbon;
 }
 
 } // namespace WRibbon

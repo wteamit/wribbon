@@ -15,11 +15,12 @@ public:
 
   MainWindow();
   virtual ~MainWindow() = default;
-  void setRibbon(Ribbon* ribbon);
+
+  Ribbon* getRibbon() const;
 
 private:
 
-  Ribbon m_ribbon = nullptr;
+  Ribbon* m_ribbon;
 
 };
 
