@@ -8,7 +8,7 @@
 
 namespace WRibbon {
 namespace Private {
-
+class RibbonUpperPart;
 } // namespace Private
 } // namespace WRibbon
 
@@ -34,10 +34,11 @@ private:
   void createElements();
   void createLayout();
 
+	Private::RibbonUpperPart* m_upperPart;
   QVBoxLayout* m_tabSplitter;
-  QHBoxLayout* m_windowButtonGroup;
 };
 
 } // namespace WRibbon
 
 #endif // !WRIBBON_RIBBON_H_
+

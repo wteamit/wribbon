@@ -1,0 +1,12 @@
+
+<!DOCTYPE RCC><RCC version="1.0">
+	<qresource prefix="/image">
+		<file alias="close-button-enabled.svg">standard/images/close-button-enabled.svg</file>
+		<file alias="close-button-disabled.svg">standard/images/close-button-disabled.svg</file>
+		<file alias="minimize-button-enabled.svg">standard/images/minimize-button-enabled.svg</file>
+		<file alias="minimize-button-disabled.svg">standard/images/minimize-button-disabled.svg</file>
+		<file alias="maximize-button-enabled.svg">standard/images/maximize-button-enabled.svg</file>
+		<file alias="maximize-button-disabled.svg">standard/images/maximize-button-disabled.svg</file>
+	</qresource>
+</RCC>
+

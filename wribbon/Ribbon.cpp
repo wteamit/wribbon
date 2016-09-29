@@ -1,9 +1,14 @@
 #include "Ribbon.h"
-#include "Private/CloseButton.h"
-#include "Private/MaximizeButton.h"
-#include "Private/MinimizeButton.h"
+#include "Private/RibbonUpperPart.h"
+#include <QFile>
 
 namespace WRibbon {
+
+///////////////////////////////////////////////////////////////////////////////
+// USING SECTION                                                             //
+///////////////////////////////////////////////////////////////////////////////
+
+using Private::RibbonUpperPart;
 
 ///////////////////////////////////////////////////////////////////////////////
 // PUBLIC SECTION                                                            //
@@ -11,6 +16,7 @@ namespace WRibbon {
 
 Ribbon::Ribbon(QWidget* parent) :
   QWidget(parent) {
+  setStyleSheet(":/qss/ribbon.qss");
   createElements();
   createLayout();
 }
@@ -44,12 +50,23 @@ void Ribbon::removeTabAtIndex(unsigned int index) {
 ///////////////////////////////////////////////////////////////////////////////
 
 void Ribbon::createElements() {
+  QFile file(":/qss/ribbon.qss");
+  file.open(QFile::ReadOnly);
+  QString styleSheet = QLatin1String(file.readAll());
+  setStyleSheet(styleSheet);
+  m_upperPart = new RibbonUpperPart(this);
   m_tabSplitter = new QVBoxLayout(this);
-  m_windowButtonGroup = new QHBoxLayout(this);
 }
 
 void Ribbon::createLayout() {
-
+  m_tabSplitter->setSpacing(0);
+  m_tabSplitter->setMargin(0);
+  m_tabSplitter->addWidget(m_upperPart);
+  auto check = new QWidget(this);
+  check->setStyleSheet("background-color:green;");
+  m_tabSplitter->addWidget(check);
+  setLayout(m_tabSplitter);
 }
 
 } // namespace WRibbon
+

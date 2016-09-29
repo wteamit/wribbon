@@ -1,0 +1,17 @@
+<!DOCTYPE RCC><RCC version="1.0">
+	<qresource prefix="/image">
+		<file alias="close-button-default.png">standard/images/close-button-default.png</file>
+		<file alias="close-button-hover.png">standard/images/close-button-hover.png</file>
+		<file alias="close-button-pressed.png">standard/images/close-button-pressed.png</file>
+		<file alias="maximize-button-default.png">standard/images/maximize-button-default.png</file>
+		<file alias="maximize-button-hover.png">standard/images/maximize-button-hover.png</file>
+		<file alias="maximize-button-pressed.png">standard/images/maximize-button-pressed.png</file>
+		<file alias="minimize-button-default.png">standard/images/minimize-button-default.png</file>
+		<file alias="minimize-button-hover.png">standard/images/minimize-button-hover.png</file>
+		<file alias="minimize-button-pressed.png">standard/images/minimize-button-pressed.png</file>
+	</qresource>
+	<qresource prefix="/qss">
+	  <file alias="ribbon.qss">standard/qss/standard.qss</file>
+	</qresource>
+</RCC>
+

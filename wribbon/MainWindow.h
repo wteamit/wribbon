@@ -27,3 +27,4 @@ private:
 } // namespace WRibbon
 
 #endif // !WRIBBON_MAINWINDOW_H_
+

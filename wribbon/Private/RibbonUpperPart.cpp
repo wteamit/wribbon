@@ -1,4 +1,4 @@
-#include "Private/WindowButtonGroup.h"
+#include "RibbonUpperPart.h"
 
 namespace WRibbon {
 namespace Private {
@@ -7,7 +7,7 @@ namespace Private {
 // PUBLIC SECTION                                                            //
 ///////////////////////////////////////////////////////////////////////////////
 
-WindowButtonGroup::WindowButtonGroup(QWidget* parent) :
+RibbonUpperPart::RibbonUpperPart(QWidget* parent) :
   QWidget(parent) {
   createElements();
   createLayout();
@@ -17,21 +17,17 @@ WindowButtonGroup::WindowButtonGroup(QWidget* parent) :
 // PRIVATE SECTION                                                           //
 ///////////////////////////////////////////////////////////////////////////////
 
-void WindowButtonGroup::createElements() {
-  setSizePolicy(QSizePolicy());
-  m_maximizeButton = new MaximizeButton(this);
-  m_minimizeButton = new MinimizeButton(this);
-  m_closeButton = new CloseButton(this);
+void RibbonUpperPart::createElements() {
+  m_windowButtonGroup = new WindowButtonGroup(this);
+  m_title = new Title(this);
   m_layout = new QHBoxLayout(this);
 }
 
-void WindowButtonGroup::createLayout() {
+void RibbonUpperPart::createLayout() {
   m_layout->setSpacing(0);
   m_layout->setMargin(0);
-  m_layout->addWidget(m_minimizeButton);
-  m_layout->addWidget(m_maximizeButton);
-  m_layout->addWidget(m_closeButton);
-  setLayout(m_layout);
+  m_layout->addWidget(m_title);
+  m_layout->addWidget(m_windowButtonGroup);
 }
 
 } // namespace Private

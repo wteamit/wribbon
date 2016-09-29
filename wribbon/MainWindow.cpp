@@ -9,9 +9,12 @@ namespace WRibbon {
 MainWindow::MainWindow() :
   QMainWindow() {
   setWindowFlags(Qt::CustomizeWindowHint);
-  setWindowFlags(Qt::FramelessWindowHint);
   m_ribbon = new Ribbon(this);
   setMenuWidget(m_ribbon);
+  QWidget* centralWidget = new QWidget(this);
+  setCentralWidget(centralWidget);
+  centralWidget->setMinimumSize(500, 400);
+  centralWidget->setStyleSheet("background-color:black;");
 }
 
 Ribbon* MainWindow::getRibbon() const {

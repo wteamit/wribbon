@@ -1,0 +1,43 @@
+
+WRibbon--Private--CloseButton {
+  width: 46px;
+	height: 31px;
+	border-image: url(":/image/close-button-default.png");
+}
+
+WRibbon--Private--CloseButton:hover {
+  border-image: url(":/image/close-button-hover.png");
+}
+
+WRibbon--Private--CloseButton:pressed {
+  border-image: url(":/image/close-button-pressed.png");
+}
+
+WRibbon--Private--MaximizeButton {
+  width: 46px;
+	height: 31px;
+	border-image: url(":/image/maximize-button-default.png");
+}
+
+WRibbon--Private--MaximizeButton:hover {
+  border-image: url(":/image/maximize-button-hover.png");
+}
+
+WRibbon--Private--MaximizeButton:pressed {
+  border-image: url(":/image/maximize-button-pressed.png");
+}
+
+WRibbon--Private--MinimizeButton {
+  width: 46px;
+	height: 31px;
+	border-image: url(":/image/minimize-button-default.png");
+}
+
+WRibbon--Private--MinimizeButton:hover {
+  border-image: url(":/image/minimize-button-hover.png");
+}
+
+WRibbon--Private--MinimizeButton:pressed {
+  border-image: url(":/image/minimize-button-pressed.png");
+}
+

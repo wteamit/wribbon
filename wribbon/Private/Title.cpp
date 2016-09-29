@@ -1,5 +1,5 @@
-#include "Private/CloseButton.h"
-#include <QSvgWidget>
+#include "Private/Title.h"
+#include <QCoreApplication>
 #include <QHBoxLayout>
 
 namespace WRibbon {
@@ -9,11 +9,14 @@ namespace Private {
 // PUBLIC SECTION                                                            //
 ///////////////////////////////////////////////////////////////////////////////
 
-CloseButton::CloseButton(QWidget* parent) :
-  QPushButton(parent) {
-  setFlat(true);
-  setAutoFillBackground(true);
-  setSizePolicy(QSizePolicy());
+Title::Title(QWidget* parent) :
+  QWidget(parent) {
+  m_title = new QLabel(this);
+  auto layout = new QHBoxLayout(this);
+  layout->addWidget(m_title);
+  layout->setAlignment(m_title, Qt::AlignHCenter);
+  m_title->setText(QCoreApplication::applicationName());
+  setLayout(layout);
 }
 
 } // namespace Private
