@@ -11,6 +11,7 @@ WindowButtonGroup::WindowButtonGroup(QWidget* parent) :
   QWidget(parent) {
   createElements();
   createLayout();
+  createConnections();
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -32,6 +33,12 @@ void WindowButtonGroup::createLayout() {
   m_layout->addWidget(m_maximizeButton);
   m_layout->addWidget(m_closeButton);
   setLayout(m_layout);
+}
+
+void WindowButtonGroup::createConnections() {
+  connect(m_closeButton, &CloseButton::clicked, this, &WindowButtonGroup::closeClicked);
+  connect(m_minimizeButton, &MinimizeButton::clicked, this, &WindowButtonGroup::minimizeClicked);
+  connect(m_maximizeButton, &MaximizeButton::clicked, this, &WindowButtonGroup::maximizeClicked);
 }
 
 } // namespace Private

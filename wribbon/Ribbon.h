@@ -29,12 +29,19 @@ public:
   Tab* getTabAtIndex(unsigned int index);
   void removeTabAtIndex(unsigned int index);
 
+signals:
+
+  void closeClicked();
+  void minimizeClicked();
+  void maximizeClicked();
+
 private:
 
   void createElements();
   void createLayout();
+  void createConnections();
 
-	Private::RibbonUpperPart* m_upperPart;
+  Private::RibbonUpperPart* m_upperPart;
   QVBoxLayout* m_tabSplitter;
 };
 

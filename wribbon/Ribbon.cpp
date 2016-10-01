@@ -56,6 +56,7 @@ void Ribbon::createElements() {
   setStyleSheet(styleSheet);
   m_upperPart = new RibbonUpperPart(this);
   m_tabSplitter = new QVBoxLayout(this);
+  createConnections();
 }
 
 void Ribbon::createLayout() {
@@ -66,6 +67,12 @@ void Ribbon::createLayout() {
   check->setStyleSheet("background-color:green;");
   m_tabSplitter->addWidget(check);
   setLayout(m_tabSplitter);
+}
+
+void Ribbon::createConnections() {
+  connect(m_upperPart, &RibbonUpperPart::closeClicked, this, &Ribbon::closeClicked);
+  connect(m_upperPart, &RibbonUpperPart::minimizeClicked, this, &Ribbon::minimizeClicked);
+  connect(m_upperPart, &RibbonUpperPart::maximizeClicked, this, &Ribbon::maximizeClicked);
 }
 
 } // namespace WRibbon

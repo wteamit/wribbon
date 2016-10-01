@@ -19,14 +19,21 @@ public:
   WindowButtonGroup(QWidget* parent = nullptr);
   virtual ~WindowButtonGroup() = default;
 
+signals:
+
+  void closeClicked();
+  void minimizeClicked();
+  void maximizeClicked();
+
 private:
 
-	void createElements();
-	void createLayout();
+  void createElements();
+  void createLayout();
+  void createConnections();
 
 private:
 
-	QHBoxLayout* m_layout;
+  QHBoxLayout* m_layout;
   MaximizeButton* m_maximizeButton;
   MinimizeButton* m_minimizeButton;
   CloseButton* m_closeButton;

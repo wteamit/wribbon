@@ -11,6 +11,7 @@ RibbonUpperPart::RibbonUpperPart(QWidget* parent) :
   QWidget(parent) {
   createElements();
   createLayout();
+  createConnections();
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -28,6 +29,12 @@ void RibbonUpperPart::createLayout() {
   m_layout->setMargin(0);
   m_layout->addWidget(m_title);
   m_layout->addWidget(m_windowButtonGroup);
+}
+
+void RibbonUpperPart::createConnections() {
+  connect(m_windowButtonGroup, &WindowButtonGroup::closeClicked, this, &RibbonUpperPart::closeClicked);
+  connect(m_windowButtonGroup, &WindowButtonGroup::minimizeClicked, this, &RibbonUpperPart::minimizeClicked);
+  connect(m_windowButtonGroup, &WindowButtonGroup::maximizeClicked, this, &RibbonUpperPart::maximizeClicked);
 }
 
 } // namespace Private

@@ -11,23 +11,30 @@ namespace Private {
 
 class RibbonUpperPart : public QWidget {
 
-	Q_OBJECT
+  Q_OBJECT
 
 public:
 
-	RibbonUpperPart(QWidget* parent = nullptr);
-	virtual ~RibbonUpperPart() = default;
+  RibbonUpperPart(QWidget* parent = nullptr);
+  virtual ~RibbonUpperPart() = default;
+
+signals:
+
+  void closeClicked();
+  void minimizeClicked();
+  void maximizeClicked();
 
 private:
 
-	void createElements();
-	void createLayout();
+  void createElements();
+  void createLayout();
+  void createConnections();
 
 private:
 
-	WindowButtonGroup* m_windowButtonGroup;
-	Title* m_title;
-	QHBoxLayout* m_layout;
+  WindowButtonGroup* m_windowButtonGroup;
+  Title* m_title;
+  QHBoxLayout* m_layout;
 };
 
 } // namespace Private

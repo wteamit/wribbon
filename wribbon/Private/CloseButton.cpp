@@ -15,7 +15,6 @@ CloseButton::CloseButton(QWidget* parent) :
   setFlat(true);
   setAutoFillBackground(true);
   setSizePolicy(QSizePolicy());
-  connect(this, &CloseButton::clicked, [=](){QCoreApplication::quit();});
 }
 
 } // namespace Private

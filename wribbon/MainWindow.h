@@ -18,6 +18,16 @@ public:
 
   Ribbon* getRibbon() const;
 
+public slots:
+
+  void maximize();
+  void minimize();
+  void quit();
+
+private:
+
+  void createConnections();
+
 private:
 
   Ribbon* m_ribbon;
