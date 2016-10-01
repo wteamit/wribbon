@@ -1,4 +1,5 @@
 #include "Private/CloseButton.h"
+#include <QCoreApplication>
 #include <QSvgWidget>
 #include <QHBoxLayout>
 
@@ -14,6 +15,7 @@ CloseButton::CloseButton(QWidget* parent) :
   setFlat(true);
   setAutoFillBackground(true);
   setSizePolicy(QSizePolicy());
+  connect(this, &CloseButton::clicked, [=](){QCoreApplication::quit();});
 }
 
 } // namespace Private
