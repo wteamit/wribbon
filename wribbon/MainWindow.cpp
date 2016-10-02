@@ -1,5 +1,7 @@
 #include "MainWindow.h"
 #include <QCoreApplication>
+#include <QDesktopWidget>
+#include <QApplication>
 
 namespace WRibbon {
 
@@ -28,7 +30,8 @@ Ribbon* MainWindow::getRibbon() const {
 ///////////////////////////////////////////////////////////////////////////////
 
 void MainWindow::maximize() {
-  setWindowState(Qt::WindowMaximized);
+  auto maxGeometry = QApplication::desktop()->availableGeometry();
+  setGeometry(maxGeometry.x(), maxGeometry.y(), maxGeometry.width(), maxGeometry.height());
 }
 
 void MainWindow::minimize() {
