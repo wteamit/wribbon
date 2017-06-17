@@ -1,8 +1,20 @@
 # WRIBBON main project.
-cmake_minimum_required (VERSION 3.0.0)
+cmake_minimum_required (VERSION 3.7.0)
 
 SET(QT_DIR "" CACHE STRING "Path containing Qt.")
 
-add_subdirectory (wribbon)
+set (WRIBBON_MAJOR_VERSION 0)
+set (WRIBBON_MINOR_VERSION 1)
+set (WRIBBON_PATCH_VERSION 0)
+set (WRIBBON_VERSION ${WMATHTEST_MAJOR_VERSION}.${WMATHTEST_MINOR_VERSION}.${WRIBBON_PATCH_VERSION})
+
+set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build/lib)
+set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build/lib)
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build/bin)
+set (TEST_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build/tests)
+set (DOC_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build/doc)
+set (CMAKE_PREFIX_PATH ${QT_ROOT})
+
+add_subdirectory (src)
 add_subdirectory (samples)
 

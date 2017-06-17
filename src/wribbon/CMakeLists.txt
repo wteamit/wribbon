@@ -1,16 +1,13 @@
 # WRibbon library
-cmake_minimum_required (VERSION 3.0.0)
+cmake_minimum_required (VERSION 3.7.0)
 
-project (WRibbon)
+project (wribbon)
 
-set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set (CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} ${QT_DIR})
 set (RESOURCES_PATH ${CMAKE_SOURCE_DIR}/resources)
 
 set (CMAKE_AUTOMOC ON)
-set (CMAKE_AUTORCC ON)
+# set (CMAKE_AUTORCC ON)
 
 find_package (Qt5Widgets REQUIRED)
 find_package (Qt5Core REQUIRED)
@@ -27,12 +24,11 @@ include_directories (${Qt5Core_INCLUDE_DIRS})
 include_directories (${Qt5Widgets_INCLUDE_DIRS})
 include_directories (${Qt5Svg_INCLUDE_DIRS})
 include_directories (${Qt5Gui_INCLUDE_DIRS})
+include_directories (${CMAKE_SOURCE_DIR}/src ${CMAKE_CURRENT_SOURCE_DIR}  ${Boost_INCLUDE_DIRS})
 
-file (GLOB_RECURSE WRIBBON_SRC "*.cpp")
-set (WRIBBON_QRC "${RESOURCES_PATH}/standard.qrc")
+file (GLOB_RECURSE PROJECT_SRC "*.cpp")
+# set (PROJECT_SRC "${RESOURCES_PATH}/standard.qrc")
 
-message (STATUS "QRC files are: ${WRIBBON_QRC}")
-
-add_library(WRibbon SHARED ${WRIBBON_SRC} ${WRIBBON_QRC})
-target_link_libraries(WRibbon Qt5::Core Qt5::Widgets Qt5::Gui Qt5::Svg)
+add_library(${PROJECT_NAME} SHARED ${PROJECT_SRC})
+target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Widgets Qt5::Gui Qt5::Svg)
 
