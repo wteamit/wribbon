@@ -1,5 +1,5 @@
-#include "WRibbon/Ribbon.hpp"
-#include "WRibbon/Private/TabBar.hpp"
+#include "wribbon/Ribbon.hpp"
+#include "wribbon/Private/TabBar.hpp"
 
 namespace WRibbon {
 

@@ -1,4 +1,4 @@
-#include "WRibbon/StatusBar.hpp"
+#include "wribbon/StatusBar.hpp"
 
 namespace WRibbon {
 

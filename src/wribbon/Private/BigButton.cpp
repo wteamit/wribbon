@@ -1,4 +1,4 @@
-#include "WRibbon/Private/BigButton.hpp"
+#include "wribbon/Private/BigButton.hpp"
 
 namespace WRibbon {
 namespace Private {

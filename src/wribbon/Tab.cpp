@@ -1,4 +1,4 @@
-#include "WRibbon/Tab.hpp"
+#include "wribbon/Tab.hpp"
 
 namespace WRibbon {
 

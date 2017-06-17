@@ -1,6 +1,6 @@
-#include "WRibbon/Button.hpp"
-#include "WRibbon/Private/BigButton.hpp"
-#include "WRibbon/Private/LittleButton.hpp"
+#include "wribbon/Button.hpp"
+#include "wribbon/Private/BigButton.hpp"
+#include "wribbon/Private/LittleButton.hpp"
 
 namespace WRibbon {
 

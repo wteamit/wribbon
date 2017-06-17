@@ -1,7 +1,7 @@
 #ifndef WRIBBON_CONTEXTUALTAB_HPP_
 #define WRIBBON_CONTEXTUALTAB_HPP_
 
-#include <WRibbon/Tab.hpp>
+#include <wribbon/Tab.hpp>
 
 namespace WRibbon {
 

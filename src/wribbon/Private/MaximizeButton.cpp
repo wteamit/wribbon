@@ -1,4 +1,4 @@
-#include "Private/MaximizeButton.hpp"
+#include "wribbon/Private/MaximizeButton.hpp"
 
 namespace WRibbon {
 namespace Private {

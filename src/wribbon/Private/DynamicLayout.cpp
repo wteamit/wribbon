@@ -1,4 +1,4 @@
-#include "WRibbon/Private/DynamicLayout.hpp"
+#include "wribbon/Private/DynamicLayout.hpp"
 
 namespace WRibbon {
 namespace Private {

@@ -1,4 +1,4 @@
-#include "WRibbon/MainWindow.hpp"
+#include "wribbon/MainWindow.hpp"
 
 namespace WRibbon {
 

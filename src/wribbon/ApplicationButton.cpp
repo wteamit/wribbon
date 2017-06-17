@@ -1,4 +1,4 @@
-#include "WRibbon/ApplicationButton.hpp"
+#include "wribbon/ApplicationButton.hpp"
 
 namespace WRibbon {
 

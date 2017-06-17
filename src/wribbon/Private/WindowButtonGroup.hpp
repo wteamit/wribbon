@@ -1,9 +1,9 @@
 #ifndef WRIBBON_PRIVATE_WINDOWBUTTONGROUP_HPP_
 #define WRIBBON_PRIVATE_WINDOWBUTTONGROUP_HPP_
 
-#include "Private/MaximizeButton.hpp"
-#include "Private/MinimizeButton.hpp"
-#include "Private/CloseButton.hpp"
+#include "wribbon/Private/MaximizeButton.hpp"
+#include "wribbon/Private/MinimizeButton.hpp"
+#include "wribbon/Private/CloseButton.hpp"
 #include <QHBoxLayout>
 #include <QWidget>
 

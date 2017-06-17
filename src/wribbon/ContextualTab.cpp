@@ -1,4 +1,4 @@
-#include "WRibbon/ContextualTab.hpp"
+#include "wribbon/ContextualTab.hpp"
 
 namespace WRibbon {
 

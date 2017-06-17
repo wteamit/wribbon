@@ -1,4 +1,4 @@
-#include "WRibbon/Private/TabBar.hpp"
+#include "wribbon/Private/TabBar.hpp"
 
 namespace WRibbon {
 namespace Private {

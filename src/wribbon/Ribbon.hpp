@@ -1,8 +1,8 @@
 #ifndef WRIBBON_RIBBON_HPP_
 #define WRIBBON_RIBBON_HPP_
 
-#include "WRibbon/ApplicationButton.hpp"
-#include "WRibbon/Tab.hpp"
+#include "wribbon/ApplicationButton.hpp"
+#include "wribbon/Tab.hpp"
 #include <QWidget>
 #include <QTabBar>
 #include <QVBoxLayout>

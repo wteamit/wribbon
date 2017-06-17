@@ -1,8 +1,8 @@
 #ifndef WRIBBON_BUTTON_HPP_
 #define WRIBBON_BUTTON_HPP_
 
-#include "WRibbon/Global.hpp"
-#include "WRibbon/Item.hpp"
+#include "wribbon/Global.hpp"
+#include "wribbon/Item.hpp"
 #include <QStackedLayout>
 #include <QString>
 #include <QIcon>

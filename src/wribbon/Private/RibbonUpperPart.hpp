@@ -1,8 +1,8 @@
 #ifndef WRIBBON_PRIVATE_RIBBONUPPERPART_HPP_
 #define WRIBBON_PRIVATE_RIBBONUPPERPART_HPP_
 
-#include "Private/WindowButtonGroup.hpp"
-#include "Private/Title.hpp"
+#include "wribbon/Private/WindowButtonGroup.hpp"
+#include "wribbon/Private/Title.hpp"
 #include <QHBoxLayout>
 #include <QWidget>
 

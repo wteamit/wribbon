@@ -1,5 +1,5 @@
-#include "WRibbon/Group.hpp"
-#include "WRibbon/Private/DynamicLayout.hpp"
+#include "wribbon/Group.hpp"
+#include "wribbon/Private/DynamicLayout.hpp"
 
 namespace WRibbon {
 

@@ -1,7 +1,7 @@
 #ifndef WRIBBON_PRIVATE_DYNAMICLAYOUT_HPP_
 #define WRIBBON_PRIVATE_DYNAMICLAYOUT_HPP_
 
-#include "WRibbon/Item.hpp"
+#include "wribbon/Item.hpp"
 #include <QLayout>
 #include <vector>
 

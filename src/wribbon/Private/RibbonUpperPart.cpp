@@ -1,4 +1,4 @@
-#include "Private/RibbonUpperPart.hpp"
+#include "wribbon/Private/RibbonUpperPart.hpp"
 
 namespace WRibbon {
 namespace Private {

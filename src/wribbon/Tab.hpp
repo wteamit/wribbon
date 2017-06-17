@@ -1,8 +1,8 @@
 #ifndef WRIBBON_TAB_HPP_
 #define WRIBBON_TAB_HPP_
 
-#include "WRibbon/Global.hpp"
-#include "WRibbon/Group.hpp"
+#include "wribbon/Global.hpp"
+#include "wribbon/Group.hpp"
 #include <QWidget>
 #include <QString>
 #include <QHBoxLayout>

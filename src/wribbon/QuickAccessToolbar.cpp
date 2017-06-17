@@ -1,4 +1,4 @@
-#include "WRibbon/QuickAccessToolbar.hpp"
+#include "wribbon/QuickAccessToolbar.hpp"
 
 namespace WRibbon {
 

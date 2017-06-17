@@ -1,10 +1,10 @@
 #ifndef WRIBBON_MAINWINDOW_HPP_
 #define WRIBBON_MAINWINDOW_HPP_
 
-#include "WRibbon/Global.hpp"
-#include "WRibbon/Ribbon.hpp"
-#include "WRibbon/StatusBar.hpp"
-#include "WRibbon/Theme.hpp"
+#include "wribbon/Global.hpp"
+#include "wribbon/Ribbon.hpp"
+#include "wribbon/StatusBar.hpp"
+#include "wribbon/Theme.hpp"
 #include <QMainWindow>
 
 namespace WRibbon {

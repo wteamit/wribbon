@@ -1,4 +1,4 @@
-#include "Private/CloseButton.hpp"
+#include "wribbon/Private/CloseButton.hpp"
 #include <QCoreApplication>
 #include <QSvgWidget>
 #include <QHBoxLayout>
