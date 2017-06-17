@@ -1,4 +1,4 @@
-#include "Private/WindowButtonGroup.h"
+#include "Private/WindowButtonGroup.hpp"
 
 namespace WRibbon {
 namespace Private {

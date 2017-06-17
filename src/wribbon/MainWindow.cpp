@@ -1,7 +1,4 @@
-#include "MainWindow.h"
-#include <QCoreApplication>
-#include <QDesktopWidget>
-#include <QApplication>
+#include "WRibbon/MainWindow.hpp"
 
 namespace WRibbon {
 
@@ -9,48 +6,58 @@ namespace WRibbon {
 // PUBLIC SECTION                                                            //
 ///////////////////////////////////////////////////////////////////////////////
 
-MainWindow::MainWindow() :
-  QMainWindow() {
-  setWindowFlags(Qt::CustomizeWindowHint);
-  m_ribbon = new Ribbon(this);
+/**
+ * Constructor.
+ *
+ * @param[in] parent The widget that owns the main window.
+ */
+MainWindow::MainWindow(QWidget* parent) :
+QMainWindow(parent),
+m_ribbon(new Ribbon(this)),
+m_statusBar(new StatusBar(this)) {
   setMenuWidget(m_ribbon);
-  QWidget* centralWidget = new QWidget(this);
-  setCentralWidget(centralWidget);
-  centralWidget->setMinimumSize(500, 400);
-  centralWidget->setStyleSheet("background-color:black;");
-  createConnections();
+  setStatusBar(m_statusBar);
 }
 
-Ribbon* MainWindow::getRibbon() const {
-  return m_ribbon;
+/**
+ * Set the theme of the main application. The theme can be defined in a
+ * preconfigured way.
+ *
+ * @param[in] theme Theme that must be applied.
+ */
+void MainWindow::setTheme(Theme theme) {
+
 }
 
-///////////////////////////////////////////////////////////////////////////////
-// PUBLIC SLOTS SECTION                                                      //
-///////////////////////////////////////////////////////////////////////////////
-
-void MainWindow::maximize() {
-  auto maxGeometry = QApplication::desktop()->availableGeometry();
-  setGeometry(maxGeometry.x(), maxGeometry.y(), maxGeometry.width(), maxGeometry.height());
+/**
+ * Set the text for the ApplicationButton of the Ribbon.
+ *
+ * @param[in] text Text.
+ */
+void MainWindow::setApplicationButtonText(const QString& text) {
+  m_ribbon->setApplicationButtonText(text);
 }
 
-void MainWindow::minimize() {
-  setWindowState(Qt::WindowMinimized);
+/**
+ * Add a Tab to the Ribbon. An empty Tab is created, and the defined name is set
+ * to it. then the Tab pointer is returned so the user can interact with it.
+ *
+ * @param[in] name Name of the Tab.
+ *
+ * @return Tab pointer.
+ */
+Tab* MainWindow::addTab(const QString& name) {
+  return m_ribbon->addTab(name);
 }
 
-void MainWindow::quit() {
-  QCoreApplication::quit();
-}
-
-///////////////////////////////////////////////////////////////////////////////
-// PRIVATE SECTION                                                           //
-///////////////////////////////////////////////////////////////////////////////
-
-void MainWindow::createConnections() {
-  connect(m_ribbon, &Ribbon::closeClicked, this, &MainWindow::quit);
-  connect(m_ribbon, &Ribbon::minimizeClicked, this, &MainWindow::minimize);
-  connect(m_ribbon, &Ribbon::maximizeClicked, this, &MainWindow::maximize);
+/**
+ * Add a Tab to the Ribbon. The Tab must be a pointer to an already existing Tab,
+ * that should have the Ribbon as parent.
+ *
+ * @param[in] tab Tab that must be added.
+ */
+void MainWindow::addTab(Tab* tab) {
+  m_ribbon->addTab(tab);
 }
 
 } // namespace WRibbon
-

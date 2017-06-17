@@ -1,4 +1,4 @@
-#include "Private/MinimizeButton.h"
+#include "Private/MinimizeButton.hpp"
 
 namespace WRibbon {
 namespace Private {

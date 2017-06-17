@@ -1,0 +1,14 @@
+#include "WRibbon/ContextualTabSet.hpp"
+
+namespace WRibbon {
+
+///////////////////////////////////////////////////////////////////////////////
+// PUBLIC SECTION                                                            //
+///////////////////////////////////////////////////////////////////////////////
+
+ContextualTabSet::ContextualTabSet(QWidget* parent) :
+QWidget(parent) {
+
+}
+
+} // namespace WRibbon

@@ -1,4 +1,4 @@
-#include "WRibbon/Private/TabBar.hpp"
+#include "WRibbon/Private/LittleButton.hpp"
 
 namespace WRibbon {
 namespace Private {
@@ -7,30 +7,33 @@ namespace Private {
 // PUBLIC SECTION                                                            //
 ///////////////////////////////////////////////////////////////////////////////
 
-TabBar::TabBar(QWidget* parent) :
+LittleButton::LittleButton(QWidget* parent) :
 QWidget(parent) {
   createWidgets();
   createLayout();
 }
 
-void TabBar::addTab(const QString& tabName) {
-  m_bar->addTab(tabName);
+void LittleButton::setText(const QString& text) {
+  m_label->setText(text);
+}
+
+void LittleButton::setIcon(const QIcon& icon) {
+  m_button->setIcon(icon);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 // PRIVATE SECTION                                                           //
 ///////////////////////////////////////////////////////////////////////////////
 
-void TabBar::createWidgets() {
-  m_bar = new QTabBar(this);
+void LittleButton::createWidgets() {
   m_layout = new QHBoxLayout(this);
+  m_label = new QLabel(this);
+  m_button = new QPushButton(this);
 }
 
-void TabBar::createLayout() {
-  m_layout->setMargin(0);
-  m_layout->setSpacing(0);
-  m_layout->addWidget(m_bar);
-  m_bar->setExpanding(false);
+void LittleButton::createLayout() {
+  m_layout->addWidget(m_button);
+  m_layout->addWidget(m_label);
 }
 
 } // namespace Private

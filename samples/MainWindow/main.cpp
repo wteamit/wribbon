@@ -1,4 +1,4 @@
-#include "wribbon/MainWindow.h"
+#include "wribbon/MainWindow.hpp"
 #include <QApplication>
 
 int main(int argc, char* argv[]) {

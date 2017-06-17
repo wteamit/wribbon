@@ -1,4 +1,4 @@
-#include "WRibbon/Private/TabBar.hpp"
+#include "WRibbon/Private/BigButton.hpp"
 
 namespace WRibbon {
 namespace Private {
@@ -7,30 +7,33 @@ namespace Private {
 // PUBLIC SECTION                                                            //
 ///////////////////////////////////////////////////////////////////////////////
 
-TabBar::TabBar(QWidget* parent) :
+BigButton::BigButton(QWidget* parent) :
 QWidget(parent) {
   createWidgets();
   createLayout();
 }
 
-void TabBar::addTab(const QString& tabName) {
-  m_bar->addTab(tabName);
+void BigButton::setText(const QString& text) {
+  m_label->setText(text);
+}
+
+void BigButton::setIcon(const QIcon& icon) {
+  m_button->setIcon(icon);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 // PRIVATE SECTION                                                           //
 ///////////////////////////////////////////////////////////////////////////////
 
-void TabBar::createWidgets() {
-  m_bar = new QTabBar(this);
-  m_layout = new QHBoxLayout(this);
+void BigButton::createWidgets() {
+  m_layout = new QVBoxLayout(this);
+  m_label = new QLabel(this);
+  m_button = new QPushButton(this);
 }
 
-void TabBar::createLayout() {
-  m_layout->setMargin(0);
-  m_layout->setSpacing(0);
-  m_layout->addWidget(m_bar);
-  m_bar->setExpanding(false);
+void BigButton::createLayout() {
+  m_layout->addWidget(m_button);
+  m_layout->addWidget(m_label);
 }
 
 } // namespace Private

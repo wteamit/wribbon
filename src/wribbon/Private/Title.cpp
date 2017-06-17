@@ -1,4 +1,4 @@
-#include "Private/Title.h"
+#include "Private/Title.hpp"
 #include <QCoreApplication>
 #include <QHBoxLayout>
 
